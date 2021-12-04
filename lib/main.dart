@@ -46,7 +46,7 @@ class ToDoApp extends StatelessWidget {
         ],
         backgroundColor: Colors.white,
       ),
-      body:Column(children:  [
+      body:ListView(children:  [
         TaskWidget(color: Colors.pink, icon: Icons.notifications, subTitle: "The family's trip to Finland next summer", taskTitle: "Plan the trip to Finland", time: "yesterday",),
         TaskWidget(color: Colors.pink, icon: Icons.notifications_on_outlined, subTitle: "", taskTitle: "Plan Susan's birthday", time: "Today 11:00",),
         TaskWidget(color: Colors.pink, icon: Icons.notifications_on_outlined, subTitle: "Get tomatoes,lettuce,potatoes,greenbeans,cream and beef fillet.Also buy red wine at John's Wine shop", taskTitle: "Groceries for dinner", time: "Today 15:00",),
