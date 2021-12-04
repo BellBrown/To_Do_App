@@ -32,12 +32,36 @@ class ToDoApp extends StatelessWidget {
     var colors;
     return Scaffold(
       floatingActionButton: FloatingActionButton(
+
         onPressed: null,
         child: Icon(Icons.add),
       ),
+      bottomSheet: Card(
+        color:Colors.blue[50],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child:Row(
+          children:[Icon(Icons.check_circle),
+         Padding(
+           padding: const EdgeInsets.all(8.0),
+           child: Text("Completed"),
+         ),
+         Padding(
+           padding: const EdgeInsets.all(8.0),
+           child: Icon(Icons.arrow_drop_down),
+         ),
+         Spacer(),
+         Text("24"),
+          ]
+        )
+        )
+      ),
       appBar: AppBar(
         title:Row(children: [
-          CircleAvatar(backgroundImage: NetworkImage("https://images.unsplash.com/photo-1633716033265-37ace8b8ee62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1227&q=80")),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CircleAvatar(backgroundImage: NetworkImage("https://images.unsplash.com/photo-1633716033265-37ace8b8ee62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1227&q=80")),
+          ),
           Text("My tasks",style: TextStyle(color: Colors.black),),
           ],),
         actions: const [
@@ -58,7 +82,6 @@ class ToDoApp extends StatelessWidget {
     );
   }
 }
-
 class TaskWidget extends StatelessWidget {
   const TaskWidget({
     Key? key, required this.taskTitle, required this.subTitle, required this.time, required this.icon, required this.color,
