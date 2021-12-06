@@ -1,6 +1,7 @@
 // this will allow you to use widget in your app
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:todoapp/create_to_do_view.dart';
 // this is the class for homeview
 class HomeView extends StatelessWidget {
   const HomeView({ Key? key }) : super(key: key);
@@ -13,7 +14,12 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
 
-        onPressed: null,
+        onPressed: (){
+          Navigator . push(context,MaterialPageRoute(builder:(context){
+            return const CreateToDo();
+          }
+           ));
+        },
         child: Icon(Icons.add),
       ),
       bottomSheet: Card(
