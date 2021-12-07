@@ -14,16 +14,16 @@ class CreateToDo extends StatelessWidget {
          
          TextFormField(
            
-           decoration: InputDecoration(
+           decoration: const InputDecoration(
              label: Text("Title"),
              
              
            ),
          ),
-         SizedBox(height:200 
+         const SizedBox(height:200 
          ),
          TextFormField(
-           decoration: InputDecoration(
+           decoration: const InputDecoration(
              label: Text("Description"),
            ),
          ),
@@ -33,22 +33,37 @@ class CreateToDo extends StatelessWidget {
            child: Padding(
              padding: const EdgeInsets.all(8.0),
              child: TextFormField(
-               decoration: InputDecoration(
+               decoration: const InputDecoration(
                  label: Text("Date"),
                ),
              ),
            ),
          ),
          Expanded(
+           // when you wrap with widget (expanded)
            child: Padding(
              padding: const EdgeInsets.all(8.0),
+             // padding allows spacing in two items.
              child: TextFormField(
-               decoration: InputDecoration(
+               decoration: const InputDecoration(
                  label: Text("Time"),
                ),
              ),
            ),
          )],
+         ),
+         Padding(
+           padding: const EdgeInsets.all(8.0),
+           child: TextButton(
+             onPressed:(){}, 
+            child: const Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Text("Create",style: TextStyle(color: Colors.white,fontSize: 20), ),
+            ),
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.blue
+            ), 
+           ),
          )
          
        ],
