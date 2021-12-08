@@ -31,8 +31,7 @@ class HomeView extends StatelessWidget {
             return ListView(
               children: [
                 TaskWidget(color: Colors.pink, icon: Icons.notifications_on_outlined, subTitle: "Get tomatoes,lettuce,potatoes,greenbeans,cream and beef fillet.Also buy red wine at John's Wine shop", taskTitle: "Groceries for dinner", time: "Today 15:00",),
-        TaskWidget(color: Colors.pink, icon: Icons.notifications_on_outlined, subTitle: "Send the presentation to Bill", taskTitle: "Port projects", time: "Tomorrow",),
-        
+       
 
               ],
             );
@@ -78,13 +77,8 @@ class HomeView extends StatelessWidget {
       ),
       body:ListView(children:  const [
         TaskWidget(color: Colors.pink, icon: Icons.notifications, subTitle: "The family's trip to Finland next summer", taskTitle: "Plan the trip to Finland", time: "yesterday",),
-        TaskWidget(color: Colors.pink, icon: Icons.notifications_on_outlined, subTitle: "", taskTitle: "Plan Susan's birthday", time: "Today 11:00",),
-        TaskWidget(color: Colors.pink, icon: Icons.notifications_on_outlined, subTitle: "Get tomatoes,lettuce,potatoes,greenbeans,cream and beef fillet.Also buy red wine at John's Wine shop", taskTitle: "Groceries for dinner", time: "Today 15:00",),
-        TaskWidget(color: Colors.pink, icon: Icons.notifications_on_outlined, subTitle: "Send the presentation to Bill", taskTitle: "Port projects", time: "Tomorrow",),
-        TaskWidget(color: Colors.pink, icon:Icons.notifications_on_outlined, subTitle: "", taskTitle: "Take jacket for cleaning", time: "Fri 30,Oct",),
-        TaskWidget(color: Colors.pink, icon: Icons.notifications, subTitle: "Install the latest update and check the wireless connection", taskTitle: "Fix dad's PC", time: "",),
-        TaskWidget(color: Colors.pink, icon: Icons.notifications_on_outlined, subTitle: "Talk to Monica about this trip", taskTitle: "Trip to stockholm", time: "",)
-      ],)
+      ]
+    )
     );
   }
 }
@@ -93,6 +87,7 @@ class TaskWidget extends StatelessWidget {
     Key? key, required this.taskTitle, required this.subTitle, required this.time, required this.icon, required this.color,
     
   }) : super(key: key);
+  
   final String taskTitle;
   final String subTitle;
   final String time;
