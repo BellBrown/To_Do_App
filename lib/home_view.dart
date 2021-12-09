@@ -8,9 +8,26 @@ import 'package:todoapp/utilities.dart';
 class HomeView extends StatelessWidget {
    HomeView({ Key? key }) : super(key: key);
   final List<Map<String, dynamic>> mydatabase = [
-    {},
-    {},
-    {}
+    {
+      "taskTitle":"Plan trip to Accra",
+      "subTitle":"I will be going to Accra",
+      "time":"Yesterday",
+      "isCompleted":false
+      
+    },
+    {
+      "taskTitle":"Work on final flutter project",
+      "subTitle":"Submit final project",
+      "time":"Yesterday",
+      "isCompleted":false
+
+    },
+    {
+      "taskTitle":"Do you have an iphone",
+      "subTitle":"No please",
+      "time":"Yesterday",
+      "isCompleted":true
+    }
   ];
 
   // ignore: non_constant_identifier_names
