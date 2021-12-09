@@ -1,11 +1,17 @@
 // this will allow you to use widget in your app
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:todoapp/create_to_do_view.dart';
+import 'package:todoapp/utilities.dart';
 // this is the class for homeview
 class HomeView extends StatelessWidget {
-  const HomeView({ Key? key }) : super(key: key);
+   HomeView({ Key? key }) : super(key: key);
+  final List<Map<String, dynamic>> mydatabase = [
+    {},
+    {},
+    {}
+  ];
 
   // ignore: non_constant_identifier_names
   get notifications_on_outlined => null;
@@ -98,7 +104,7 @@ class TaskWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: const Icon(Icons.check_circle_outline,color: Colors.pink,),
+        leading:  Icon(Icons.check_circle_outline,color: paint(time),),
         title:Text(taskTitle),
         subtitle: Text(subTitle),
         trailing:Padding(
@@ -106,7 +112,7 @@ class TaskWidget extends StatelessWidget {
           child: Row(
             children: <Widget> [
               Icon(icon),
-              Text(time,style: const TextStyle(color: Colors.pink),)
+              Text(time,style:  TextStyle(color: paint(time)),)
             ],
             mainAxisSize: MainAxisSize.min,
           ),

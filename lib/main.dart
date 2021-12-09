@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //the homeview()is a class in home_view.dart
-      home: const HomeView()
+      home:  HomeView()
     );
   }
 }
